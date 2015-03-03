@@ -26,7 +26,7 @@ toast.setMsg("Cheers");
 ```
 
 ###API  :
-1. *setMsg* : This function accepts 4 parameters of which first one is mandatory , the message itself; and rest three are optional which can be used to controll the duration of the notification, the fading in speed and fading out speed respectively.
+*setMsg* : This function accepts 4 parameters of which first one is mandatory , the message itself; and rest three are optional which can be used to controll the duration of the notification, the fading in speed and fading out speed respectively.
 ```js
 /*Edited For Brewity*/
 
@@ -35,7 +35,8 @@ toast.setMsg("Cheers",2000); /*This message stays on screen for 2 seconds*/
 /*Edited For Brewity*/
 ```
 If multiple _.setMsg()_ functions are called one after the other. All the notifications would be queued automatically, and woudl be called in their triggering order.
-2. *hide* : This function hides the active toast explicitly.
+
+*hide* : This function hides the active toast explicitly.
 ```js
 /*Edited For Brewity*/
 
