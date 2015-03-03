@@ -35,7 +35,7 @@ toast.setMsg("Cheers",2000); /*This message stays on screen for 2 seconds*/
 /*Edited For Brewity*/
 ```
 If multiple _.setMsg()_ functions are called one after the other. All the notifications would be queued automatically, and woudl be called in their triggering order.
-
+===
 2. *hide* : This function hides the active toast explicitly.
 ```js
 /*Edited For Brewity*/
