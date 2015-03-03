@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Cheers by akhilarjun</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Cheers</h1>
+          <h2>An AngularJs plugin that will help you create small notifications on desktop, and at the same time the same would appear as a toast on Mobile devices, i.e. irrespective of the OS</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/akhilarjun/Cheers/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/akhilarjun/Cheers/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/akhilarjun/Cheers" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="cheers" class="anchor" href="#cheers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cheers</h1>
+
+<p>An AngularJs plugin that will help you create small notifications on desktop, and at the same time the same would appear as a toast on Mobile devices, i.e. irrespective of the OS</p>
+
+<h2>
+<a id="how-to" class="anchor" href="#how-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To:</h2>
+
+<p>First you have to include the <em>cheers.js</em> file to your page</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">'</span>js/cheers.js<span class="pl-pds">'</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>And then initialise it in your angular application as follows,</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-c">/*Edited For Brewity*/</span>
+
+<span class="pl-s">var</span> app <span class="pl-k">=</span> angular.module(<span class="pl-s1"><span class="pl-pds">"</span>app<span class="pl-pds">"</span></span>,[<span class="pl-s1"><span class="pl-pds">'</span>cheers<span class="pl-pds">'</span></span>]);
+
+<span class="pl-c">/*Edited For Brewity*/</span></pre></div>
+
+<p>Now include the <em>toast</em> service to your controller and Voila! you get your Toast/Notification on your screen</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-c">/*Edited For Brewity*/</span>
+
+app.controller(<span class="pl-s1"><span class="pl-pds">"</span>demoController<span class="pl-pds">"</span></span>,[<span class="pl-s1"><span class="pl-pds">"</span>$scope<span class="pl-pds">"</span></span>,<span class="pl-s1"><span class="pl-pds">"</span>toast<span class="pl-pds">"</span></span>,<span class="pl-st">function</span>(<span class="pl-vpf">$scope</span>,<span class="pl-vpf">toast</span>){
+toast.setMsg(<span class="pl-s1"><span class="pl-pds">"</span>Cheers<span class="pl-pds">"</span></span>);
+}]);
+
+<span class="pl-c">/*Edited For Brewity*/</span></pre></div>
+
+<h3>
+<a id="api--" class="anchor" href="#api--" aria-hidden="true"><span class="octicon octicon-link"></span></a>API  :</h3>
+
+<p><strong>setMsg</strong> : This function accepts 4 parameters of which first one is mandatory , the message itself; and rest three are optional which can be used to controll the duration of the notification, the fading in speed and fading out speed respectively.</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-c">/*Edited For Brewity*/</span>
+
+toast.setMsg(<span class="pl-s1"><span class="pl-pds">"</span>Cheers<span class="pl-pds">"</span></span>,<span class="pl-c1">2000</span>); <span class="pl-c">/*This message stays on screen for 2 seconds*/</span>
+
+<span class="pl-c">/*Edited For Brewity*/</span></pre></div>
+
+<p>If multiple <em>.setMsg()</em> functions are called one after the other. All the notifications would be queued automatically, and woudl be called in their triggering order.</p>
+
+<p><strong>hide</strong> : This function hides the active toast explicitly.</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-c">/*Edited For Brewity*/</span>
+
+toast.hide();
+
+<span class="pl-c">/*Edited For Brewity*/</span></pre></div>
+        </section>
+
+        <footer>
+          Cheers is maintained by <a href="https://github.com/akhilarjun">akhilarjun</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
