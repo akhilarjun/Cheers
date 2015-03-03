@@ -1,6 +1,8 @@
 # Cheers
 An AngularJs plugin that will help you create small notifications on desktop, and at the same time the same would appear as a toast on Mobile devices, i.e. irrespective of the OS
 
+###[Demo Here](http://akhilarjun.github.io/Cheers/demo.html)
+
 ##How To:
 First you have to include the _cheers.js_ file to your page
 ```html
