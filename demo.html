@@ -1,0 +1,51 @@
+<html ng-app='demo'>
+<head>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro);
+*{
+	font-family: 'Maven Pro', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	text-align : center;
+}
+h1{
+	background-color: #39c;
+	color: #fff;
+	font-size: 40px;
+	padding: 50px;
+}
+button{
+	width : 30%;
+	background-color: #fff;
+	border : 2px solid #999;
+	color : #999;
+	padding : 10px;
+	font-size: 20px;
+	margin: 10px 5px;
+}
+</style>
+</head>
+<body ng-controller='demoController'>
+<h1>CHEERS !!</h1>
+<div><button ng-click='showToast("Cheers!",500)'>Example 1</button>
+<button ng-click='showToast("Akhil Arjun",1000)'>Example 2</button>
+<button ng-click='showToast("<i>Too Long A message For Toast</i>",2000)'>Example 3</button></div>
+<cheers></cheers>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src='js/angular-1.0.1.js'></script>
+<script src='js/cheers.js'></script>
+<script>
+var app=angular.module('demo',['cheers']);
+app.controller('demoController',['$scope','toast',function($scope,toast){
+	$scope.a = "Cheers";
+	$scope.showToast = function(t,i){
+		toast.setMsg(t,i);
+	};
+}]);
+</script>
+</body>
+</html>
