@@ -16,6 +16,14 @@ var app = angular.module("app",['cheers']);
 
 /*Edited For Brewity*/
 ```
+Then include the tag in your HTML file
+```html
+/*Edited For Brewity*/
+
+<cheers></cheers>
+
+/*Edited For Brewity*/
+```
 Now include the _toast_ service to your controller and Voila! you get your Toast/Notification on your screen
 ```js
 /*Edited For Brewity*/
